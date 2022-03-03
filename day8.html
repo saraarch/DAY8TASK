@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day8 assignment</title>
+    <script>
+//       ######person class
+    class Person{
+        constructor(name,gender,age,nationality){
+          this.name = name;
+          this.age=age;
+          this.gender = gender;
+          this.nationality= nationality;
+      
+        }
+showdetails()
+ {
+  console.log(`"Hi ! I'm  ${this.name}, ${this.gender}, and I'm ${this.age} years old".I'm from,${this.nationality}.`)
+  };
+  
+    }
+const details = new Person("saranya", "female", 28,"india",);
+details.showdetails()
+// ###############
+// circle
+class Circle {
+// constructor to assign initial values
+constructor(radius, color) {
+this.radius = radius
+this.color = color
+}
+
+// returns radius of the circle
+getRadius () {
+return this.radius
+}
+
+// assigns new value to radius
+setRadius (radius) {
+this.radius = radius
+}
+
+// get color of the circle
+getColor () {
+return this.color
+}
+
+// assigns new value to color
+setColor (color) {
+this.color = color
+}
+
+// calculate area
+getArea () {
+return Math.PI * this.radius * this.radius
+}
+
+// calculate circumference
+getCircumference () {
+return 2 * Math.PI * this.radius;
+}
+}
+
+let myCircle = new Circle (1, 'RED',)
+console.log(myCircle.getRadius())
+console.log(myCircle.getColor())
+console.log(myCircle.getArea())
+console.log(myCircle.getCircumference())
+
+// after changing
+myCircle.setColor('Blue')
+myCircle.setRadius(2)
+console.log(myCircle.getRadius())
+console.log(myCircle.getColor())
+console.log(myCircle.getArea())
+console.log(myCircle.getCircumference())
+// #####uber price
+class Uber {
+  constructor(distance,price){
+  this.distance = distance
+  this.price = price
+}
+
+getPrice()
+
+{
+  return this.distance * this.price
+}
+}
+let taxicost = new Uber(5,100);
+console.log(taxicost.getPrice())
+// class movie filter by rating pg
+class Movie{
+  constructor(title,studio,rating = "PG"){
+  this.title = title
+  this.studio = studio
+  this.rating = rating
+}
+getPg(arr){
+let result = []
+arr.filter(movie=>{if(movie.rating === "PG13"){
+result.push(movie)
+}
+})
+
+return result
+}
+}
+const movie1= new Movie('cassino royal',"eon productions",'PG13')
+const movie2 = new Movie('doctor',"studio productions",'PG')
+const movie3 =new Movie ('gangubai',"bansali productions",'PG1')
+let moviesarr = [movie1,movie2,movie3]
+console.log(movie1.getPg(moviesarr))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
